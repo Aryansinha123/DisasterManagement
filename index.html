@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Management</h1>
+        <div class="nav-buttons">
+            <button id="open-popup" class="nav-btn">Login</button>
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
+    
+    <!-- Login Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+            <p>Don't have an account? <button id="open-register" class="register-btn">Register Now</button></p>
+        </div>
+    </div>
+    
+    <!-- Register Popup -->
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeRegisterPopup()">&times;</span>
+            <h2>Register</h2>
+            <input type="text" placeholder="Username">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Register</button>
+            <p>Already have an account? <button id="back-to-login" class="register-btn">Login</button></p>
+        </div>
+    </div>
+    
+    <!-- Interactive Section -->
+    <section class="disaster-updates">
+        <h2>Real-Time Disaster Alerts</h2>
+        <div id="alerts">Fetching updates...</div>
+    </section>
+    
+    <!-- Floating AI Assistant -->
+    <div id="chatbot-container">
+        <button id="chatbot-btn">🤖</button>
+        <div id="chatbox" class="hidden">
+            <div id="chat-messages">
+                <p class="bot-message">Hello! How may I help you?</p>
+            </div>
+            <input type="text" id="user-input" placeholder="Ask about disasters...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+    <!-- JavaScript for Functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
